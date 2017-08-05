@@ -5,6 +5,24 @@
 
 # GisTeam - A minimalist web app to beautify code, share paste and hash
 
+## Features
+- Beautifier - Javascript/JSON, XML, HTML, CSS, SQL
+- Hash - Hash strings with md5 and sha1, sha256, sha512
+- Paste - pastebin like feature, with expiry, download and raw view
+
+### Techy bits
+- production ready with properly minified, compressed and bundled assets
+- pm2 to manage and scale node processes
+
+## Roadmap
+- Time manipulation/converter
+- Encrypt Pastes
+
+### Techy bits
+- Dockerize
+- Add unit tests
+- Benchmark
+
 ## Quickstart
 
 ### Prerequisites
