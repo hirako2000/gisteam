@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/hirako2000/gisteam.svg?branch=master)](https://travis-ci.org/hirako2000/gisteam)
+[![Dependency Status](https://david-dm.org/hirako2000/gisteam.svg?style=flat)](https://david-dm.org/hirako2000/gisteam)
+[![devDependency Status](https://david-dm.org/hirako2000/gisteam/dev-status.svg)](https://david-dm.org/hirako2000/gisteam#info=devDependencies)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/hirako2000/gisteam/blob/master/LICENSE)
 
 # GisTeam - A minimalist web app to beautify code, share paste and hash
 
