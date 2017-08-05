@@ -27,7 +27,8 @@
     "build": "gulp build",
     "watch": "gulp watch",
     "gulp": "gulp",
-    "modclean": "modclean -r -n safe, caution, danger"
+    "modclean": "modclean -r -n safe, caution, danger",
+    "test": "exit 0"
   },
   "dependencies": {
     "app-module-path": "^2.2.0",
@@ -64,6 +65,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
@@ -82,6 +84,13 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-util": "^3.0.7",
     "modclean": "^2.1.0",
-    "pm2": "^2.6.1"
+    "pm2": "^2.6.1",
+    "xo": "^0.18.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    }
   }
 }
