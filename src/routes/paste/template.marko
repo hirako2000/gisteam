@@ -1,0 +1,25 @@
+include('../layout.marko')
+  @content
+    div.pt2.pb4.pl3.pr3
+      form class='form' action='/paste' method='post'
+        p -- New Paste
+        p
+          textarea class='textarea' name='input' rows="10"
+            if(data.input)
+              -- ${data.input}
+        p -- Expiration
+        p
+          select class="ui dropdown full-width" name='expiration'
+            for(expiration in data.expirations)
+              if(expiration === '1 WEEK')
+                option value='${expiration}' selected -- ${expiration}
+              else
+                option value='${expiration}' -- ${expiration}
+
+        p
+          button class='btn full-width' onClick="" value="button"
+            -- PASTE!
+        if(data.result)
+          p
+            pre
+              code -- ${data.result}

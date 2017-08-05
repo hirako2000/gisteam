@@ -1,0 +1,34 @@
+include('../layout.marko')
+  @content
+    div.pt2.pb4.pl3.pr3
+      form class='form' action='/hash' method='post'
+        p 
+          -- Input
+        p
+          textarea class='textarea' name='input' rows="10"
+            if(data.input)
+              -- ${data.input}
+        p
+          button class='btn full-width' onClick="" value="button"
+            -- HASH!
+      if(data.hexHashes)
+        p
+          table 
+            tr
+              th -- Algorithm
+              th -- HEX 
+            tr for(name, value in data.hexHashes)
+              tr
+                td -- ${name}
+                td -- ${value} 
+      if(data.b64Hashes)
+        p
+          table 
+            tr
+              th -- Algorithm
+              th -- BASE64 
+            tr for(name, value in data.b64Hashes)
+              tr
+                td -- ${name}
+                td -- ${value} 
+

@@ -1,0 +1,16 @@
+include('../layout.marko')
+  @content
+    div.pt2.pb4.pl3.pr3
+      if(data.result)
+        div.p1
+          a.btn-small href='/paste/raw/${data.id}' -- Raw
+          a.btn-small href='/paste/download/${data.id}' -- Download
+          span.label-small -- ${data.size} Bytes
+          if(data.expiry)
+            span.label-small -- This Paste expires ${data.expiry}
+        div 
+          pre
+            code -- ${data.result}
+      else
+        p -- Paste not found :(
+        p -- Bad link? Maybe it was there, but expired?

@@ -1,0 +1,28 @@
+include('../layout.marko')
+  @content
+    div.pt2.pb4.pl3.pr3
+      form class='form' action='/beautify' method='post'
+        div
+          p -- Input
+        div
+          p
+            select class="ui dropdown full-width" name='format'
+              for(format in data.formats)
+                if(format === data.format)
+                  option value='${format}' selected -- ${format}
+                else
+                  option value='${format}' -- ${format}
+        div
+          p
+            textarea class='textarea' name='input' rows="10"
+              if(data.input)
+                -- ${data.input}
+        div
+          p
+            button class='btn full-width' onClick="" value="button"
+              -- BEAUTIFY!
+      if(data.result)
+        div
+          p -- Output
+        pre
+          code -- ${data.result}

@@ -1,0 +1,16 @@
+lasso-page package-path='./browser.json' timeout=60*1000
+html
+  head
+    title -- ${data.title || 'GisTeam'}
+    link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet"
+    lasso-head
+  body
+    include('./header.marko')
+    if(data.content)
+      include(data.content)
+    include('./footer.marko')
+    lasso-body
+    await-reorderer
+    init-widgets
+    script src="/assets/js/highlight.min.js"
+    script -- hljs.initHighlightingOnLoad();
