@@ -84,7 +84,7 @@ Babel transpiles new ES2015 (and ES2016) syntax into ES5 valid code.
 
 ### Lasso
 
->[Lasso.js][lasso] is an open source Node.js-style JavaScript module bundler from eBat. It also provides first-level support for optimally delivering JavaScript, CSS, images and other assets to the browser.
+>[Lasso.js][lasso] is an open source Node.js-style JavaScript module bundler from eBay. It also provides first-level support for optimally delivering JavaScript, CSS, images and other assets to the browser.
 
 It's like Webpack + Browserify/jspm/RequireJS
 
@@ -94,7 +94,8 @@ It's like Webpack + Browserify/jspm/RequireJS
 
 ### MongoDB/Mongoose
 
-> Ideal for fast development.
+> Ideal for fast development, using [mongoose][mongoose]
+
 
 ## Usage
 
@@ -205,4 +206,6 @@ Sets up Koa 2 and most used modules
 
 [koa-static]: https://github.com/koajs/static
 [koa-better-body]: https://github.com/tunnckoCore/koa-better-body
+
+[mongoose]: http://mongoosejs.com/
 
