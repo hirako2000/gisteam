@@ -26,5 +26,5 @@
     'transform-es2015-unicode-regex',
     'transform-regenerator',
     'transform-async-to-generator'
-  ],
+  ]
 }

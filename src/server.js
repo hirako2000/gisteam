@@ -92,22 +92,19 @@ require('./routes/paste');
 require('./routes/hash');
 
 /* Connect to MongoDB */
-const mongoDB = config.mongodb.host + ':' + config.mongodb.port + '/' + config.mongodb.db;
+const mongoHost = process.env.DB_HOST || config.mongodb.host;
+const mongoPort = process.env.DB_PORT || config.mongodb.port;
+const mongoName = process.env.DB_NAME || config.mongodb.db;
+const mongoDB = mongoHost + ':' + mongoPort + '/' + mongoName;
 mongoose.connect(mongoDB, {
   useMongoClient: true
 });
-mongoose.connection.on('error', () => {
-  winston.error('MongoDB Connection Error.');
+mongoose.connection.on('error', (e) => {
+  winston.error('MongoDB Connection Error.', e);
   winston.log('MongoDB is expected to be at: ' + mongoDB);
   winston.log('Please make sure that MongoDB is running there');
   process.exit(1);
 });
 
-const promise = mongoose.connect('mongodb://localhost/myapp', {
-  useMongoClient: true
-  /* Other options */
-});
-
 /* Start Listening */
 server.listen(serverPort, () => winston.info('Server now listening on ' + serverPort));
-

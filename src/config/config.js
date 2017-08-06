@@ -5,7 +5,7 @@ const config = {
   mongodb: {
     host: 'mongodb://localhost',
     port: '27017',
-    db: 'good-all'
+    db: 'gisteam'
   }
 };
 
