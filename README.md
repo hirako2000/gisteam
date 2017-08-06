@@ -45,7 +45,7 @@ npm install
 npm run build
 ```
 
-This transpiles *.es6 files, and copies other files (css/etc), from /src to /lib
+This transpiles *.js files, and copies other files (css/etc), from /src to /lib
 
 It uses `gulp build` task as defined in the <a href='gulpfile.js'>`.gulpfile`</a>
 
@@ -111,9 +111,9 @@ It's like Webpack + Browserify/jspm/RequireJS
     │
     ├───src
     │   │
-    │   │   index.es6  // basic initial configuration (babel, sourcemaps)
+    │   │   index.js   // basic initial configuration (babel, sourcemaps)
     │   │
-    │   │   server.es6 // Koa server and configuration
+    │   │   server.js  // Koa server and configuration
     │   │              // exports the koa `app` which can be required elsewhere
     │   │              // imports /routes/xxx
     │   │
@@ -121,18 +121,18 @@ It's like Webpack + Browserify/jspm/RequireJS
     │   │   │   layout.marko // basic layout
     │   │   │
     │   │   ├───beautify
-    │   │   │       index.es6
+    │   │   │       index.js
     │   │   │       template.marko
     │   │   ├───hash
-    │   │   │       index.es6
+    │   │   │       index.js
     │   │   │       template.marko
     │   │   ├───home
-    │   │   │       index.es6      // route logic
+    │   │   │       index.js       // route logic
     │   │   │       template.marko // marko template (extends from layout.marko)
-    │   │   │       widget.es6     // marko-widget (better client-side javascripting)
+    │   │   │       widget.js      // marko-widget (better client-side javascripting)
     │   │   │
     │   │   ├───paste
-    │   │   │       index.es6
+    │   │   │       index.js
     │   │   │       template.marko
     │   │   │       otemplate.marko // this one has a specific output template
     │   │   │
@@ -141,17 +141,15 @@ It's like Webpack + Browserify/jspm/RequireJS
     │   │   └───...
     │   │
     │   ├───db
-    │   │       index.es6 // uses redis
-    │   │       user.es6  // basic user
-    │   │
+    │   │   └───... // db schema for Paste
     │   └───public
     │       └───... // public resources exposed as static files
     │
     │
     ├───lib (auto-generate)
     │   │  // /src gets compiled here, the project mainly runs from here
-    │   │  // .es6 files from /src gets compiled to .js files here
-    │   │  // other than .es6 files get copied as is (css, fonts etc)
+    │   │  // .js files from /src gets compiled to .js files here
+    │   │  // other than .js files get copied as is (css, fonts etc)
     │   │
     │   ├───public
     │   │   │
@@ -165,7 +163,7 @@ It's like Webpack + Browserify/jspm/RequireJS
     └───node_modules // (.gitignore’d)
 
 
-### <a href='src/index.es6'>`src/index.es6`</a>
+### <a href='src/index.js'>`src/index.js`</a>
 
 This file sets up preliminaries:
 
@@ -173,7 +171,7 @@ This file sets up preliminaries:
   * sourcemap-support
   * [Bluebird] as the  default promise library
 
-### <a href='src/server.es6'>`src/server.es6`</a>
+### <a href='src/server.js'>`src/server.js`</a>
 
 Sets up Koa 2 and most used modules
 
