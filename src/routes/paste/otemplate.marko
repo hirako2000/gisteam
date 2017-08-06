@@ -3,8 +3,8 @@ include('../layout.marko')
     div.pt2.pb4.pl3.pr3
       if(data.result)
         div.p1
-          a.btn-small href='/paste/raw/${data.id}' -- Raw
-          a.btn-small href='/paste/download/${data.id}' -- Download
+          a.btn.btn-small href='/paste/raw/${data.id}' -- Raw
+          a.btn.btn-small href='/paste/download/${data.id}' -- Download
           span.label-small -- ${data.size} Bytes
           if(data.expiry)
             span.label-small -- This Paste expires ${data.expiry}

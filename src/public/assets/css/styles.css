@@ -2,6 +2,11 @@
 light gray : rgb(238, 238, 238);
 **/
 
+* {
+  outline-color: #eeeeee;
+  outline-width: 10px;
+}
+
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
@@ -11,6 +16,8 @@ body {
 a {
   color: inherit;
   text-decoration: inherit;
+  outline-color: #fff;
+  outline-width: 5px;
 }
 
 a:hover {
@@ -18,6 +25,13 @@ a:hover {
 }
 select {
   height: 3.5em;
+  border-width: 2px;
+  border-color: #eeeeee;
+  background: #ffffff;
+  border-radius: 0;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  padding-left: 0.5em;
 }
 
 p {
@@ -116,9 +130,9 @@ header {
   display: block;
   width: 100%;
   padding: .5rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
   box-sizing: border-box;
+  border: 2px solid #eeeeee;
+  border-radius: 0px;
 }
 
 .btn {
@@ -132,29 +146,16 @@ header {
   margin: 0;
   height: auto;
   vertical-align: middle;
-  border: 1px solid transparent;
   -webkit-appearance: none;
+  outline-color: #211e1e;
+  outline-width: 5px;
+  border: 1px solid transparent;
 }
 
 .btn-huge {
   font-size: 3em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: rgb(238, 238, 238);
-  cursor: pointer;
-  display: inline-block;
-  height: auto;
-  vertical-align: middle;
-  -webkit-appearance: none;
   padding: 0.5em;
-  text-decoration: none;
-  margin: 0px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  border-image: initial;
 }
-
 
 .btn:hover {
   text-decoration: none;
@@ -163,17 +164,6 @@ header {
 .btn-small {
   padding: 5px;
   font-size: 0.5em;
-  color: #fff;
-  background-color: #5D6B7A;
-  border-color: #5D6B7A;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
-  height: auto;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  -webkit-appearance: none;
 }
 
 .btn-small:hover {
@@ -183,9 +173,9 @@ header {
 .label-small {
   padding: 5px;
   font-size: 0.5em;
-  color: #fff;
-  background-color: #8094a9;
-  border-color: #8094a9;
+  color: #2e0000;
+  background-color: #f0f0f0;
+  border-color: #49444e;
   text-decoration: none;
   display: inline-block;
   margin: 0;
@@ -198,7 +188,6 @@ header {
 .full-width {
   width: 100%;
 }
-
 
 table {
   table-layout: fixed;

@@ -28,7 +28,7 @@
     "watch": "gulp watch",
     "gulp": "gulp",
     "modclean": "modclean -r -n safe, caution, danger",
-    "test": "exit 0"
+    "test": "xo ./src/**/*.js !./src/public/assets/js/*.*"
   },
   "dependencies": {
     "app-module-path": "^2.2.0",
@@ -36,7 +36,6 @@
     "basscss": "^8.0.3",
     "bluebird": "^3.3.4",
     "highlight.js": "^9.12.0",
-    "http": "0.0.0",
     "isdev": "^1.0.1",
     "js-beautify": "^1.6.14",
     "jshashes": "^1.0.7",
@@ -86,6 +85,58 @@
     "modclean": "^2.1.0",
     "pm2": "^2.6.1",
     "xo": "^0.18.2"
+  },
+  "xo": {
+    "no-unassigned-import": false,
+    "space": 2,
+    "esnext": true,
+    "parser": "babel-eslint",
+    "envs": [
+      "node",
+      "browser",
+      "es6"
+    ],
+    "syntax_map": {
+      "JavaScript (Babel)": "javascript"
+    },
+    "rules": {
+      "operator-linebreak": [
+        2,
+        "before"
+      ],
+      "curly": [
+        2,
+        "multi-or-nest"
+      ],
+      "one-var": 0,
+      "no-else-return": 1,
+      "capitalized-comments": 0,
+      "no-undef": 0,
+      "no-new": 0,
+      "camelcase": 0,
+      "linebreak-style": 0,
+      "new-cap": [
+        1,
+        {
+          "newIsCap": true,
+          "capIsNew": true,
+          "properties": false
+        }
+      ],
+      "babel/arrow-parens": 0,
+      "xo/filename-case": 0,
+      "no-warning-comments": 0,
+      "unicorn/filename-case": 0,
+      "import/no-unassigned-import": 0,
+      "import/prefer-default-export": 0,
+      "import/extensions": [
+        2,
+        "never",
+        {
+          "json": "always"
+        }
+      ]
+    }
   },
   "eslintConfig": {
     "parserOptions": {

@@ -1,30 +1,30 @@
-var gulp = require('gulp');
-var print = require('gulp-print');
-var del = require('del');
-var changed = require('gulp-changed-in-place');
-var gulpIf = require('gulp-if');
-var babel = require('gulp-babel');
-var sourcemaps = require('gulp-sourcemaps');
-var debounce = require('lodash').debounce;
-var gzip = require('gulp-gzip');
+const gulp = require('gulp');
+const print = require('gulp-print');
+const del = require('del');
+const changed = require('gulp-changed-in-place');
+const gulpIf = require('gulp-if');
+const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
+const debounce = require('lodash').debounce;
+const gzip = require('gulp-gzip');
 
 gulp.task('clean', done =>
   del(['lib/**/*', '.cache/**/*'], done));
 
 gulp.task('copy', () =>
-  gulp.src(['src/**/*', '!src/**/*.es6'], { follow: /*symlinks*/ true })
-  .pipe( /*only*/ changed /*files*/ ({ /*after*/ firstPass: true }))
+  gulp.src(['src/**/*'], {follow: /* symlinks */ true})
+  .pipe(/* only */ changed({firstPass: true}))
   .pipe(gulp.dest('lib')));
 
 gulp.task('gzip', () =>
-  gulp.src(['lib/**/*', '!lib/**/*.es*'])
+  gulp.src(['src/public/**/*.*'])
   .pipe(gzip())
-  .pipe(gulp.dest('lib')));
+  .pipe(gulp.dest('lib/public')));
 
 gulp.task('babel', done =>
-  gulp.src('src/**/*.es*', { follow: true })
+  gulp.src(['src/**/*.js', '!src/public/**/*'], {follow: true})
   .pipe(sourcemaps.init())
-  .pipe(babel( /*.babelrc*/ ))
+  .pipe(babel(/* .babelrc */))
   .pipe(sourcemaps.write({
     includeContent: false,
     sourceRoot: 'src'
@@ -32,7 +32,7 @@ gulp.task('babel', done =>
   .pipe(gulp.dest('lib')));
 
 gulp.task('watch', () =>
-  gulp.watch('src', { followSymlinks: true }, debounce(gulp.series(
+  gulp.watch('src', {followSymlinks: true}, debounce(gulp.series(
     'copy', 'babel'), 2000)));
 
 gulp.task('build',
@@ -41,7 +41,7 @@ gulp.task('build',
 gulp.task('default',
   gulp.series('build', 'watch'));
 
-gulp.task('test', function() {
+gulp.task('test', () => {
   return gulp.src('./**/*.*')
     .pipe(print(p => 'file:' + p))
     .pipe(gulp.dest('.'));

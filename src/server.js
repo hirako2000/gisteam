@@ -1,5 +1,6 @@
 import config from './config/config';
 import koa from 'koa';
+import compress from 'koa-compress';
 import isDev from 'isdev';
 import convert from 'koa-convert';
 import bodyParser from 'koa-better-body';
@@ -34,21 +35,21 @@ const statsOptions = {
     interval: 30,    // Every 30 seconds
     retention: 60
   }]
-}
+};
 app.use(monitor(server, statsOptions));
 
 /* Static Files */
 app.use(convert(serve(__dirname + '/public', {
   maxage: isDev ? 0 : Infinity,
-  gzip: isDev ? false : true,
-  hidden: isDev,
+  gzip: !isDev,
+  hidden: isDev
 })));
 
 /* Body Parser (form submission) */
 app.use(convert(bodyParser({
   multipart: false,
   fields: 'body',
-  textLimit: '8000kb', // default is '100kb'
+  textLimit: '8000kb', // Default is '100kb'
   formLimit: '8000kb'
 })));
 
@@ -63,12 +64,12 @@ lasso.configure({
   resolveCssUrls: true,
   fingerprintsEnabled: !isDev,
   minify: !isDev,
-  bundlingEnabled: !isDev,
+  bundlingEnabled: !isDev
 });
 lassoReqNoop.enable('.css', '.styl', '.less');
 
 /* Error handler */
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   try {
     await next();
     // Yes, I know what I'm doing...
@@ -95,16 +96,16 @@ const mongoDB = config.mongodb.host + ':' + config.mongodb.port + '/' + config.m
 mongoose.connect(mongoDB, {
   useMongoClient: true
 });
-mongoose.connection.on('error', function () {
+mongoose.connection.on('error', () => {
   winston.error('MongoDB Connection Error.');
   winston.log('MongoDB is expected to be at: ' + mongoDB);
   winston.log('Please make sure that MongoDB is running there');
   process.exit(1);
 });
 
-var promise = mongoose.connect('mongodb://localhost/myapp', {
-  useMongoClient: true,
-  /* other options */
+const promise = mongoose.connect('mongodb://localhost/myapp', {
+  useMongoClient: true
+  /* Other options */
 });
 
 /* Start Listening */
