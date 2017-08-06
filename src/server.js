@@ -40,7 +40,7 @@ app.use(monitor(server, statsOptions));
 
 /* Static Files */
 app.use(convert(serve(__dirname + '/public', {
-  maxage: isDev ? 0 : Infinity,
+  maxage: isDev ? 0 : 2628000,
   gzip: !isDev,
   hidden: isDev
 })));
