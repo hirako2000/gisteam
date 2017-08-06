@@ -5,6 +5,8 @@
 
 # GisTeam - A minimalist web app to beautify code, share paste and hash
 
+## [Live Demo][livedemo]
+
 ## Features
 - 💫 Beautifier - Javascript/JSON, XML, HTML, CSS, SQL
 - 🔑 Hash - Hash strings with md5 and sha1, sha256, sha512
@@ -209,3 +211,4 @@ Sets up Koa 2 and most used modules
 
 [mongoose]: http://mongoosejs.com/
 
+[livedemo]: https://gisteam-ywfnvghcqm.now.sh/
