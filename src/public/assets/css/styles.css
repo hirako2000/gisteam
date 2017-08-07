@@ -40,6 +40,8 @@ p {
 }
 
 pre {
+  white-space: pre-wrap;
+  word-break: break-all;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
