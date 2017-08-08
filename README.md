@@ -5,7 +5,8 @@
 
 # GisTeam - A minimalist web app to beautify code, share paste and hash
 
-## [Live Demo][livedemo] (first hit might take a minute to spin up the instance)
+## [Live Demo][livedemo] 
+(first hit might take a minute to spin up the instance)
 
 ## Features
 - 💫 Beautifier - Javascript/JSON, XML, HTML, CSS, SQL
