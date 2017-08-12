@@ -8,6 +8,8 @@
 ## [Live Demo][livedemo] 
 (first hit might take a minute to spin up the instance)
 
+![demo](https://github.com/hirako2000/gisteam/blob/master/gisteam-demo.gif?raw=true)
+
 ## Features
 - 💫 Beautifier - Javascript/JSON, XML, HTML, CSS, SQL
 - 🔑 Hash - Hash strings with md5 and sha1, sha256, sha512
