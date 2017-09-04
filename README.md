@@ -212,4 +212,4 @@ Sets up Koa 2 and most used modules
 
 [mongoose]: http://mongoosejs.com/
 
-[livedemo]: https://gisteam-wlrojcrklj.now.sh
+[livedemo]: https://gisteam-mpxnkezcoi.now.sh
