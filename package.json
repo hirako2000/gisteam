@@ -1,6 +1,6 @@
 {
   "name": "gisteam",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "main": "lib/index.js",
   "description": "Fast server side rendering code beautifier, pastebin and hash",
   "repository": "https://github.com/hirako2000/gisteam",
