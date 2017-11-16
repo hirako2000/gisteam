@@ -20,7 +20,7 @@
   "author": "Hirako2000",
   "license": "MIT",
   "scripts": {
-    "now-start": "exit 0",
+    "now-start": "exit 1",
     "now-build": "gulp build && cross-env NODE_ENV=production node .",
     "start": "cross-env NODE_ENV=dev browser-refresh .",
     "start:prod-test": "cross-env NODE_ENV=production node .",
@@ -37,10 +37,12 @@
     "babel-polyfill": "^6.7.2",
     "basscss": "^8.0.3",
     "bluebird": "^3.3.4",
+    "clean-css": "^4.1.9",
     "highlight.js": "^9.12.0",
     "isdev": "^1.0.1",
     "js-beautify": "^1.6.14",
     "jshashes": "^1.0.7",
+    "jsonminify": "^0.4.1",
     "koa": "^2.3.0",
     "koa-better-body": "^3.0.4",
     "koa-compress": "^2.0.0",
@@ -62,6 +64,7 @@
     "pretty-data": "^0.40.0",
     "shortid": "^2.2.8",
     "source-map-support": "^0.4.0",
+    "uglify-es": "^3.1.9",
     "winston": "^2.3.1"
   },
   "devDependencies": {

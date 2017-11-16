@@ -90,6 +90,7 @@ require('./routes/home');
 require('./routes/beautify');
 require('./routes/paste');
 require('./routes/hash');
+require('./routes/minify');
 
 /* Connect to MongoDB */
 const mongoHost = process.env.DB_HOST || config.mongodb.host;
