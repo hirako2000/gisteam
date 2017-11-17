@@ -12,6 +12,7 @@
 
 ## Features
 - 💫 Beautifier - Javascript/JSON, XML, HTML, CSS, SQL
+- 💨 Minifier - Javascript, JSON, XML, CSS, SQL
 - 🔑 Hash - Hash strings with md5 and sha1, sha256, sha512
 - 📋 Paste - pastebin like feature, with expiry, download and raw view
 
@@ -133,12 +134,13 @@ It's like Webpack + Browserify/jspm/RequireJS
     │   │   │       index.js       // route logic
     │   │   │       template.marko // marko template (extends from layout.marko)
     │   │   │       widget.js      // marko-widget (better client-side javascripting)
-    │   │   │
+    │   │   ├───minify
+    │   │   │       index.js
+    │   │   │       template.marko
     │   │   ├───paste
     │   │   │       index.js
     │   │   │       template.marko
     │   │   │       otemplate.marko // this one has a specific output template
-    │   │   │
     │   │   │   browser.json // for lasso
     │   │   │
     │   │   └───...
