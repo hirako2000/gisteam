@@ -23,6 +23,8 @@ include('../layout.marko')
               -- MINIFY!
       if(data.result)
         div
-          p -- Output
+          p -- Output 
+            button class='copier btn btn-small right' data-clipboard-target='#copiable'
+              -- Copy
         pre
-          code -- ${data.result}
+          code id='copiable' -- ${data.result}
