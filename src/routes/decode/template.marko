@@ -1,0 +1,30 @@
+include('../layout.marko')
+  @content
+    div.pt2.pb4.pl3.pr3
+      form class='form' action='/decode' method='post'
+        div
+          p -- Input
+        div
+          p
+            select class="ui dropdown full-width" name='format'
+              for(format in data.formats)
+                if(format === data.format)
+                  option value='${format}' selected -- ${format}
+                else
+                  option value='${format}' -- ${format}
+        div
+          p
+            textarea class='textarea' name='input' rows="10"
+              if(data.input)
+                -- ${data.input}
+        div
+          p
+            button type="submit" class='btn full-width' onClick="" value="button"
+              -- DECODE!
+      if(data.result)
+        div
+          p -- Output 
+            button class='copier btn btn-small right' data-clipboard-target='#copiable'
+              -- Copy
+        pre
+          code id='copiable' -- ${data.result}
