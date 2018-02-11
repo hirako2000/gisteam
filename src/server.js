@@ -91,6 +91,8 @@ require('./routes/beautify');
 require('./routes/paste');
 require('./routes/hash');
 require('./routes/minify');
+require('./routes/encode');
+require('./routes/decode');
 
 /* Connect to MongoDB */
 const mongoHost = process.env.DB_HOST || config.mongodb.host;

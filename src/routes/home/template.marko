@@ -31,8 +31,15 @@ include('../layout.marko')
 
       div.col.col-12.p2
         div.sm-col.lg-col-4.sm-col-12.md-col-4
-          a.btn.btn-huge href='#' -- Time
+          a.btn.btn-huge href='/encode' -- Encode
         div.sm-col.lg-col-8.sm-col-12.md-col-8.pt1.pb2
-          p -- Oh well I didn't have time for that
-          strong.p1 -- Ideas? What would you like this to do?
+          p -- Encode strings using various encoding methods.
+          strong.p1 -- URL (Percent) Encode - Base64 Encode
+
+      div.col.col-12.p2
+        div.sm-col.lg-col-4.sm-col-12.md-col-4
+          a.btn.btn-huge href='/decode' -- Decode
+        div.sm-col.lg-col-8.sm-col-12.md-col-8.pt1.pb2
+          p -- Decode already encoded strings using various encoding methods.
+          strong.p1 -- URL (Percent) Decode - Base64 Decode
 
