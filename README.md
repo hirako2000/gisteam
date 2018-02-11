@@ -14,9 +14,9 @@
 - 💫 Beautifier - Javascript/JSON, XML, HTML, CSS, SQL
 - 💨 Minifier - Javascript, JSON, XML, CSS, SQL
 - 🔑 Hash - Hash strings with md5 and sha1, sha256, sha512
-- 📋 Paste - pastebin like feature, with expiry, download and raw view
-- <icon> Encode - Encode strings using URL Encode, Base64
-- <icon> Decode - Decode encoded-strings using URL Encode, Base64
+- 📋 Paste - Pastebin-like feature, with expiry, download and raw view
+- ⟿ Encode - URL, Base64
+- ⟵ Decode - URL Encode, Base64
 
 ### Techy bits
 - production ready with properly minified, compressed and bundled assets
