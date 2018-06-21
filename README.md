@@ -5,9 +5,6 @@
 
 # GisTeam - A minimalist web app to beautify code, share paste and hash
 
-## [Live Demo][livedemo] 
-(first hit might take a minute to spin up the instance)
-
 ![demo](https://github.com/hirako2000/gisteam/blob/master/gisteam-demo.gif?raw=true)
 
 ## Features
