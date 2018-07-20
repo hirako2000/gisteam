@@ -3,7 +3,7 @@
 [![devDependency Status](https://david-dm.org/hirako2000/gisteam/dev-status.svg)](https://david-dm.org/hirako2000/gisteam#info=devDependencies)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/hirako2000/gisteam/blob/master/LICENSE)
 
-# GisTeam - A minimalist web app to beautify code, share paste and hash
+# GisTeam - A minimalist web app to minify/beautify code, store, hash and encode/decode text
 
 ![demo](https://github.com/hirako2000/gisteam/blob/master/gisteam-demo.gif?raw=true)
 
