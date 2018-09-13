@@ -20,8 +20,8 @@
   "author": "Hirako2000",
   "license": "MIT",
   "scripts": {
-    "now-start": "exit 1",
-    "now-build": "gulp build && cross-env NODE_ENV=production node .",
+    "now-start": "cross-env NODE_ENV=production node .",
+    "now-build": "gulp build",
     "start": "cross-env NODE_ENV=dev browser-refresh .",
     "start:prod-test": "cross-env NODE_ENV=production node .",
     "start:prod": "cross-env NODE_ENV=production pm2 start .",
