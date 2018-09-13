@@ -2,7 +2,6 @@ lasso-page package-path='./browser.json' timeout=60*1000
 html
   head
     title -- ${data.title || 'GisTeam'}
-    link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet"
     lasso-head
   body
     include('./header.marko')
@@ -16,3 +15,5 @@ html
     script src="/assets/js/clipboard.min.js"
     script -- hljs.initHighlightingOnLoad();
     script -- new Clipboard('.copier');
+    link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet";
+    

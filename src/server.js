@@ -8,7 +8,6 @@ import winston from 'winston';
 import { createLogger, transports, format } from 'winston';
 const logform = require('logform');
 const { combine, timestamp, label, printf } = logform.format;
-
 import lasso from 'lasso';
 import lassoReqNoop from 'lasso/node-require-no-op';
 import markoNodeReq from 'marko/node-require';
@@ -67,7 +66,7 @@ app.use(monitor(server, statsOptions));
 app.use(
   convert(
     serve(__dirname + '/public', {
-      maxage: isDev ? 0 : 2628000,
+      maxage: isDev ? 0 : 2628000000,
       gzip: !isDev,
       hidden: isDev
     })
