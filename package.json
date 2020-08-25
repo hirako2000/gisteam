@@ -81,7 +81,7 @@
     "browser-refresh": "^1.7.2",
     "cross-env": "^5.1.3",
     "del": "^3.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "4.0.0",
     "gulp-babel": "^7.0.0",
     "gulp-changed-in-place": "^2.3.0",
     "gulp-filter": "^5.0.0",
