@@ -9,17 +9,17 @@ const debounce = require('lodash').debounce;
 const gzip = require('gulp-gzip');
 
 gulp.task('clean', done =>
-  del(['lib/**/*', '.cache/**/*'], done));
+  del(['api/**/*', '.cache/**/*'], done));
 
 gulp.task('copy', () =>
   gulp.src(['src/**/*'], {follow: /* symlinks */ true})
   .pipe(/* only */ changed({firstPass: true}))
-  .pipe(gulp.dest('lib')));
+  .pipe(gulp.dest('api')));
 
 gulp.task('gzip', () =>
   gulp.src(['src/public/**/*.*'])
   .pipe(gzip())
-  .pipe(gulp.dest('lib/public')));
+  .pipe(gulp.dest('api/public')));
 
 gulp.task('babel', done =>
   gulp.src(['src/**/*.js', '!src/public/**/*'], {follow: true})
@@ -29,7 +29,7 @@ gulp.task('babel', done =>
     includeContent: false,
     sourceRoot: 'src'
   }))
-  .pipe(gulp.dest('lib')));
+  .pipe(gulp.dest('api')));
 
 gulp.task('watch', () =>
   gulp.watch('src', {followSymlinks: true}, debounce(gulp.series(
