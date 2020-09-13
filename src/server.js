@@ -150,6 +150,6 @@ mongoose.connection.on('error', e => {
 });
 
 /* Start Listening */
-server.listen(serverPort, () =>
+server.listen(process.env.PORT || serverPort, () =>
   logger.info('Server now listening on ' + serverPort)
 );
