@@ -132,7 +132,12 @@ require('./routes/decode');
 const mongoHost = process.env.DB_HOST || config.mongodb.host;
 const mongoPort = process.env.DB_PORT || config.mongodb.port;
 const mongoName = process.env.DB_NAME || config.mongodb.db;
-const mongoDB = mongoHost + ':' + mongoPort + '/' + mongoName;
+let mongoDB = "";
+if (process.env.HEROKU) {
+  mongoDB = mongoHost;
+} else {
+  mongoDB = mongoHost + ':' + mongoPort + '/' + mongoName;
+}
 mongoose.connect(
   mongoDB,
   { useNewUrlParser: true }
