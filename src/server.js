@@ -140,7 +140,10 @@ if (process.env.HEROKU) {
 }
 mongoose.connect(
   mongoDB,
-  { useNewUrlParser: true }
+  { useNewUrlParser: true,
+    server: {
+      sslValidate: false
+  } }
 );
 mongoose.connection.on('error', e => {
   winston.error('MongoDB Connection Error.', e);
