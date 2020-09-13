@@ -19,6 +19,9 @@
   ],
   "author": "Hirako2000",
   "license": "MIT",
+  "engines" : { 
+    "node" : ">=0.12" 
+  },
   "scripts": {
     "now-start": "cross-env NODE_ENV=production node .",
     "now-build": "gulp build",
