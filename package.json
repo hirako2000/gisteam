@@ -34,7 +34,9 @@
     "watch": "gulp watch",
     "gulp": "gulp",
     "modclean": "modclean -r -n safe, caution, danger",
-    "test": "xo ./src/**/*.js !./src/public/assets/js/*.*"
+    "test": "xo ./src/**/*.js !./src/public/assets/js/*.*",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@lasso/marko-taglib": "^1.0.10",
@@ -72,7 +74,8 @@
     "shortid": "^2.2.8",
     "source-map-support": "^0.5.0",
     "uglify-es": "^3.3.2",
-    "winston": "^3.0.0"
+    "winston": "^3.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -174,5 +177,6 @@
     "coveragePathIgnorePatterns": [
       "/node_modules"
     ]
-  }
+  },
+  "snyk": true
 }
