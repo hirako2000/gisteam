@@ -20,7 +20,7 @@
   "author": "Hirako2000",
   "license": "MIT",
   "engines" : { 
-    "node" : ">=0.12" 
+    "node" : ">=10" 
   },
   "scripts": {
     "now-start": "cross-env NODE_ENV=production node .",
