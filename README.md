@@ -1,5 +1,5 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c33fcfaa0237435e84dc11ac44ea372c)](https://app.codacy.com/app/hirako2000/gisteam?utm_source=github.com&utm_medium=referral&utm_content=hirako2000/gisteam&utm_campaign=Badge_Grade_Dashboard)
-![GitHub PageSpeed](https://pagespeed-badges.herokuapp.com/?url=https://gisteam.herokuapp.com/?strat=desktop)
+[![uptime](https://img.shields.io/uptimerobot/ratio/m781182158-18096b64a2b89e307dcc0a30)](https://img.shields.io/uptimerobot/ratio/m781182158-18096b64a2b89e307dcc0a30)
 [![Build Status](https://travis-ci.org/hirako2000/gisteam.svg?branch=master)](https://travis-ci.org/hirako2000/gisteam)
 [![Dependency Status](https://david-dm.org/hirako2000/gisteam.svg?style=flat)](https://david-dm.org/hirako2000/gisteam)
 [![devDependency Status](https://david-dm.org/hirako2000/gisteam/dev-status.svg)](https://david-dm.org/hirako2000/gisteam#info=devDependencies)
