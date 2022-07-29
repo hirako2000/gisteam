@@ -67,7 +67,7 @@
     "marko": "^4.7.4",
     "marko-widgets": "^6.6.6",
     "moment": "^2.20.1",
-    "mongoose": "^5.2.10",
+    "mongoose": "^6.4.6",
     "pretty-data": "^0.40.0",
     "shortid": "^2.2.8",
     "source-map-support": "^0.5.0",
