@@ -59,7 +59,7 @@
     "koa-route": "^3.1.0",
     "koa-socket": "^4.4.0",
     "koa-static": "^5.0.0",
-    "lasso": "^3.2.4",
+    "lasso": "^4.0.0",
     "lasso-less": "^3.0.1",
     "lasso-marko": "^2.4.0",
     "lasso-stylus": "^2.0.0",
